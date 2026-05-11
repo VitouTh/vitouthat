@@ -554,3 +554,52 @@ footer {
       height: 140px;
     }
 }
+
+/* ============================================================
+   16. LANGUAGE SWITCHER
+   ============================================================ */
+
+/* Hide the inactive language */
+body[data-lang="en"] [lang="kh"] { display: none; }
+body[data-lang="kh"] [lang="en"] { display: none; }
+
+/* Khmer typography — applied when body is in Khmer mode */
+body[data-lang="kh"],
+body[data-lang="kh"] h1,
+body[data-lang="kh"] h3,
+body[data-lang="kh"] p,
+body[data-lang="kh"] .tagline,
+body[data-lang="kh"] .nav-name,
+body[data-lang="kh"] .entry-title,
+body[data-lang="kh"] .entry-org,
+body[data-lang="kh"] .entry-note,
+body[data-lang="kh"] .beyond-text,
+body[data-lang="kh"] .about-pullquote,
+body[data-lang="kh"] .theme h3,
+body[data-lang="kh"] .pub-section-title {
+  font-family: 'Noto Serif Khmer', 'Newsreader', serif;
+}
+
+/* Khmer reads slightly larger comfortably */
+body[data-lang="kh"] p,
+body[data-lang="kh"] .tagline { line-height: 1.85; }
+
+/* Toggle button */
+.lang-toggle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clay);
+  background: transparent;
+  border: 1px solid var(--sand);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.lang-toggle:hover {
+  background: var(--clay);
+  color: var(--paper);
+  border-color: var(--clay);
+}
