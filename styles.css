@@ -1,0 +1,556 @@
+/* ============================================================
+   STYLES.CSS — portfolio for Vitou That
+   ============================================================ */
+
+
+/* ============================================================
+   1. THEME VARIABLES  (edit colors here)
+   ============================================================ */
+:root {
+  --cream:        #F4EEE2;   /* page background */
+  --cream-soft:   #EFE7D7;   /* soft card */
+  --paper:        #FBF7EE;   /* lightest panel */
+  --bark:         #2A241E;   /* primary text */
+  --bark-soft:    #4A4137;   /* secondary text */
+  --stone:        #897C6B;   /* muted / meta text */
+  --sand:         #D9CDB6;   /* hairlines / borders */
+  --clay:         #A8552E;   /* primary accent — terracotta */
+  --moss:         #6F7A56;   /* secondary accent — sage */
+  --ochre:        #B58A3C;   /* tertiary accent */
+
+  --max-width:    760px;
+  --gutter:       2rem;
+}
+
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--bark);
+  font-family: 'Newsreader', 'Georgia', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--bark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sand);
+  transition: border-color 0.2s, color 0.2s;
+}
+a:hover {
+  border-bottom-color: var(--clay);
+  color: var(--clay);
+}
+
+::selection {
+  background: var(--clay);
+  color: var(--paper);
+}
+
+
+/* ============================================================
+   3. NAVIGATION
+   ============================================================ */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(244, 238, 226, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sand);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.1rem var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.nav-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.nav-links a {
+  border-bottom: none;
+  color: var(--stone);
+}
+.nav-links a:hover { color: var(--clay); }
+
+
+/* ============================================================
+   4. LAYOUT
+   ============================================================ */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+section {
+  padding: 5.5rem 0 4rem;
+  border-bottom: 1px solid var(--sand);
+}
+section:last-of-type { border-bottom: none; }
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--clay);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--clay);
+}
+
+
+/* ============================================================
+   5. HERO
+   ============================================================ */
+.hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5rem;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: start;
+}
+.hero-photo {
+  display: inline-block;
+  padding: 12px;                                /* matte width */
+  background: var(--cream);                     /* matte color */
+  border-radius: 50%;
+  position: relative;
+  box-shadow:
+    0 0 0 1px var(--sand),                      /* outer hairline ring */
+    0 18px 36px -12px rgba(42, 36, 30, 0.18),   /* main soft shadow */
+    0 2px 6px rgba(42, 36, 30, 0.06);           /* contact shadow */
+}
+
+.hero-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper);                     /* fills behind transparent PNG */
+  display: block;
+  filter: saturate(0.9);
+  box-shadow: 0 0 0 1px rgba(168, 85, 46, 0.4); /* inner clay hairline */
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--clay);
+  font-weight: 300;
+}
+.hero .tagline {
+  font-family: 'Newsreader', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--bark-soft);
+  max-width: 32rem;
+  line-height: 1.55;
+}
+.hero-meta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--stone);
+}
+.hero-meta span::before {
+  content: "—";
+  margin-right: 0.5rem;
+  color: var(--ochre);
+}
+.hero-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   6. BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--clay);
+  background: transparent;
+  color: var(--clay);
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn:hover {
+  background: var(--clay);
+  color: var(--paper);
+  border-bottom-color: var(--clay);
+}
+.btn-ghost {
+  border-color: var(--sand);
+  color: var(--bark-soft);
+}
+.btn-ghost:hover {
+  background: var(--bark);
+  color: var(--paper);
+  border-color: var(--bark);
+}
+
+
+/* ============================================================
+   7. ABOUT
+   ============================================================ */
+.about p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--bark-soft);
+  margin-bottom: 1.25rem;
+  max-width: 38rem;
+}
+.about p strong {
+  color: var(--bark);
+  font-weight: 500;
+}
+.about-pullquote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 0 1.5rem 1.75rem;
+  border-left: 2px solid var(--clay);
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--bark);
+  max-width: 32rem;
+}
+
+
+/* ============================================================
+   8. RESEARCH THEMES
+   ============================================================ */
+.themes {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+.theme {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1.5rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px dashed var(--sand);
+}
+.theme:last-child { border-bottom: none; }
+
+.theme-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--ochre);
+  letter-spacing: 0.05em;
+  padding-top: 0.4rem;
+}
+.theme h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+  color: var(--bark);
+}
+.theme p {
+  color: var(--bark-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 36rem;
+}
+
+
+/* ============================================================
+   9. PUBLICATIONS
+   ============================================================ */
+.pub-section {
+  margin-bottom: 3rem;
+}
+.pub-section:last-child { margin-bottom: 0; }
+
+.pub-section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--bark);
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--sand);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.pub-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--stone);
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.pub {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--sand);
+}
+.pub:last-child { border-bottom: none; }
+
+.pub-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--stone);
+  padding-top: 0.25rem;
+  letter-spacing: 0.02em;
+}
+.pub-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--bark);
+  margin-bottom: 0.4rem;
+}
+.pub-venue {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--bark-soft);
+}
+
+
+/* ============================================================
+   10. TIMELINE  (Education & Experience)
+   ============================================================ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.entry {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px dashed var(--sand);
+}
+.entry:last-child { border-bottom: none; }
+
+.entry-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--ochre);
+  letter-spacing: 0.04em;
+  padding-top: 0.3rem;
+}
+.entry-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--bark);
+  margin-bottom: 0.25rem;
+}
+.entry-org {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--bark-soft);
+  margin-bottom: 0.4rem;
+}
+.entry-note {
+  font-size: 0.95rem;
+  color: var(--bark-soft);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   11. AWARDS
+   ============================================================ */
+.awards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.award {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+  padding: 0.6rem 0;
+}
+.award-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--ochre);
+  letter-spacing: 0.04em;
+  padding-top: 0.25rem;
+}
+.award-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.02rem;
+  color: var(--bark);
+  font-weight: 500;
+}
+.award-org {
+  font-style: italic;
+  color: var(--bark-soft);
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   12. BEYOND RESEARCH
+   ============================================================ */
+.beyond-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--bark-soft);
+  max-width: 36rem;
+}
+
+
+/* ============================================================
+   13. CONTACT
+   ============================================================ */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+}
+.contact-list a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: none;
+  padding: 0.4rem 0;
+}
+.contact-list .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ochre);
+  min-width: 6rem;
+}
+.contact-list .value {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  color: var(--bark);
+  border-bottom: 1px solid var(--sand);
+  transition: border-color 0.2s, color 0.2s;
+}
+.contact-list a:hover .value {
+  border-bottom-color: var(--clay);
+  color: var(--clay);
+}
+
+
+/* ============================================================
+   14. FOOTER
+   ============================================================ */
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem var(--gutter) 4rem;
+  border-top: 1px solid var(--sand);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stone);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+/* ============================================================
+   15. RESPONSIVE  (mobile)
+   ============================================================ */
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+
+  .pub,
+  .theme { grid-template-columns: 3rem 1fr; gap: 1rem; }
+
+  .entry,
+  .award { grid-template-columns: 5.5rem 1fr; gap: 1rem; }
+
+  .nav-links { gap: 1rem; font-size: 0.7rem; }
+
+  section { padding: 4rem 0 3rem; }
+
+  .hero {
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-photo {
+      padding: 10px;
+      margin: 0 auto;
+    }
+    .hero-photo img {
+      width: 140px;
+      height: 140px;
+    }
+}
