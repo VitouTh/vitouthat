@@ -9,28 +9,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif+Khmer:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body data-lang="en">
 
   <!-- ============================================================
        NAV
        ============================================================ -->
   <nav>
-    <div class="nav-inner">
-      <div class="nav-name">Vitou That</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#background">Background</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <div class="nav-inner">
+    <div class="nav-name">
+      <span lang="en">Vitou That</span>
+      <span lang="kh">ថាត វិទូ</span>
     </div>
-  </nav>
+    <div class="nav-links">
+      <a href="#about"><span lang="en">About</span><span lang="kh">អំពីខ្ញុំ</span></a>
+      <a href="#research"><span lang="en">Research</span><span lang="kh">កិច្ចការស្រាវជ្រាវ</span></a>
+      <a href="#publications"><span lang="en">Publications</span><span lang="kh">ស្នាដៃបោះពុម្ពផ្សាយ</span></a>
+      <a href="#background"><span lang="en">Background</span><span lang="kh">ប្រវត្តិ</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="kh">ទំនាក់ទំនង</span></a>
+      <button id="lang-toggle" class="lang-toggle" type="button">EN</button>
+    </div>
+  </div>
+</nav>
 
   <main>
 
@@ -40,9 +45,14 @@
     <section class="hero">
   <div class="hero-grid">
     <div class="hero-text">
-      <h1>Vitou That<br><em>AI researcher.</em></h1>
+      <h1><span lang="en">Vitou That<br><em>AI researcher.</em></span>
+        <span lang="kh">ថាត វិទូ<br><em>អ្នកស្រាវជ្រាវ ផ្នែកបញ្ញាសិប្បនិម្មិត</em></span></h1>
       <p class="tagline">
-        Mathematics is where I started. Machine learning is what I do. Wireless and semantic communication is where I take it.
+        <span lang="en">Mathematics is where I started. <br>Machine learning is what I do.<br> Wireless and semantic communication is where I take it.</span>
+        <span lang="kh">ចាប់ផ្តើមពីគណិតវិទ្យា
+                      <br>រស់ជាមួយ បញ្ញាសិប្បនិម្មិត
+<br> បន្តដំណើរជាមួយបច្ចេកវិទ្យាទំនាក់ទំនងឥតខ្សែ និងទំនាក់ទំនងតាមអត្ថន័យ</span>
+      
       </p>
       <div class="hero-meta">
         <span>Multi-Agent Systems</span>
@@ -68,33 +78,44 @@
       <div class="section-label">About</div>
 
       <p>
-        I am the <strong>son of a math teacher</strong>. 
-        Numbers were the most natural language in our house, and I grew up solving problems for the pleasure of it.
+        <span lang="en">I am the <strong>son of a math teacher</strong>. 
+        Numbers were the most natural language in our house, and I grew up solving problems for the pleasure of it.</span>
+        <span lang="kh">ខ្ញុំគឺជា<strong>កូនរបស់គ្រូគណិតវិទ្យាមួយរូប</strong> នៅក្នុងផ្ទះរបស់ខ្ញុំ គណិតវិទ្យាគឺជាផ្នែកមួយនៃភាសាដែលខ្ញុំធំធាត់មកជាមួយ។</span>
       </p>
 
       <p>
-        At 17th, I left Cambodia with scholarship offers from both home and abroad institutions. 
+
+        <span lang="en">At 17th, I left Cambodia with scholarship offers from both home and abroad institutions. 
         I chose abroad, and I chose Information Technology, a field I knew almost nothing about, 
-        because watching tools like Google SEO had convinced me the world had moved further than I had realised.
+        because watching tools like Google SEO had convinced me the world had moved further than I had realised.</span>
+        <span lang="kh">នៅអាយុ ១៧ ឆ្នាំ ខ្ញុំចាកចេញពីប្រទេសកំណើតជាមួយនឹងអាហារូបករណ៍មួយចំនួនពីក្នុង និងក្រៅស្រុក។ គ្រានោះ ខ្ញុំសម្រេចទៅរៀននៅឯក្រៅស្រុក ហើយខ្ញុំរើសយកជំនាញ ព័ត៌មានវិទ្យា ត្បិតជាជំនាញមួយដែលខ្ញុំមិនយល់ទាល់តែសោះ ត្រឹមដឹងថាពិភពលោកហាក់មានការវិវឌ្ឍន៍ទៅលឿននៅពេលមានវត្តមាន បច្ចេកវិទ្យាស្វែងរក របស់ Google ហើយវាលឿនជាងអ្វីដែលខ្ញុំគិតដល់ទៅទៀត។
+</span>
       </p>
 
       <div class="about-pullquote">
-        The world moves further.<br> I keep trying to catch up.
+        <span lang="en">The world moves further.<br> I keep trying to catch up.</span>
+        <span lang="kh">ត្បិតពិភពលោកដើរលឿន <br> 
+តែយើងត្រូវប្រឹងសម្រប</span>
       </div>
 
       <p>
-        In the years that followed, I worked as a full‑stack developer, 
+        <span lang="en">In the years that followed, I worked as a full‑stack developer, 
         building various websites and mobile applications. 
         This period was formative, where it taught me what engineering feels like in practice. 
         As artificial intelligence began to rise, however, my focus shifted back to problems where mathematics, 
-        not only engineering, provides the answers. 
-        The <a href="https://ains.cau.ac.kr/" target="_blank" rel="noopener">
+        not only engineering, provides the answers.
+      The <a href="https://ains.cau.ac.kr/" target="_blank" rel="noopener">
           <strong class="value">AINS Lab</strong>
-        </a> gave me the environment to pursue that work.
+        </a> gave me the environment to pursue that work.</span>
+        <span lang="kh">ពីរឆ្នាំបន្ទាប់ ខ្ញុំបានក្លាយខ្លួនជាអ្នកអភិវឌ្ឍគេហទំព័រ និងកម្មវិធីទូរស័ព្ទដៃមួយរូប។ វាជាពេលមួយនៃការផ្លាស់ប្តូរក្នុងការមើលឃើញរបស់ខ្ញុំ ពីទ្រឹស្តីក្នុងវិស្វកម្ម មកជាការអនុវត្តជាក់ស្តែងក្នុងជីវិត។ មិនយូរប៉ុន្មាន មានការចុះផ្សាយជាច្រើនអំពីសិប្បនិម្មិត ខ្ញុំបានចាប់អារម្មណ៍យ៉ាងខ្លាំង ព្រោះដូចជាការបន្សំចូលគ្នារវាង គណិតវិទ្យា និងវិស្វកម្ម ដែលជាអ្វីដែលខ្ញុំចូលចិត្ត។  <a href="https://ains.cau.ac.kr/" target="_blank" rel="noopener">
+          <strong class="value">មន្ទីរពិសោធន៍ AINS</strong>
+        </a>  បានបំពេញក្តីស្រមៃខ្ញុំ ដែលបានផ្តល់ឱកាសអាហារូបករណ៍ដល់ខ្ញុំសម្រាប់កិច្ចការស្រាវជ្រាវ។
+</span>
       </p>
 
       <p>
-        I see academic work as a long and uncertain road, fields change in ways no one can fully predict. More than any particular method, I rely on the ability to keep learning when the ground shifts.
+        <span lang="en">I see academic work as a long and uncertain road, fields change in ways no one can fully predict. More than any particular method, I rely on the ability to keep learning when the ground shifts. </span>
+        <span lang="kh">ខ្ញុំយល់ថាការសិក្សាស្រាវជ្រាវ ជាដំណើរផ្លូវដ៏វែងឆ្ងាយ និងមិនប្រាកដមួយ ជួនពេលខ្លះមានរបត់ជាច្រើនដែលត្រូវផ្លាស់ប្តូរ ចំពោះខ្ញុំជាអ្នកសិក្សាស្រាវជ្រាវ ខ្ញុំពេញចិត្តរៀននូវថ្មីៗជានិច្ច។</span>
       </p>
     </section>
 
@@ -102,7 +123,7 @@
          RESEARCH FOCUS
          ============================================================ -->
     <section id="research">
-      <div class="section-label">Research Focus</div>
+      <div class="section-label"><span lang="en">Research Focus</span><span lang="kh">កិច្ចការស្រាវជ្រាវ</span></div>
 
       <div class="themes">
 
@@ -150,13 +171,15 @@
          PUBLICATIONS
          ============================================================ -->
     <section id="publications">
-      <div class="section-label">Publications</div>
+      <div class="section-label"><span lang="en">Publications</span><span lang="kh">ស្នាដៃបោះពុម្ពផ្សាយ</span></div>
 
       <!-- INTERNATIONAL JOURNALS -->
       <div class="pub-section">
         <div class="pub-section-title">
-          <span>International Journals</span>
-          <span class="pub-count">06 papers</span>
+          <span lang="en">International Journal</span>
+          <span lang="kh">ទស្សនាវដ្ដីអន្តរជាតិ</span>
+          <span class="pub-count" lang="en">03 papers</span>
+          <span class="pub-count" lang="en">០៦ ឯកសារ</span>
         </div>
 
         <div class="pub">
@@ -256,8 +279,10 @@
       <!-- INTERNATIONAL CONFERENCES -->
       <div class="pub-section">
         <div class="pub-section-title">
-          <span>International Conferences</span>
-          <span class="pub-count">03 papers</span>
+          <span lang="en">International Conferences</span>
+          <span lang="kh">សន្និសិទស្រាវជ្រាវអន្តរជាតិ</span>
+          <span class="pub-count" lang="en">03 papers</span>
+          <span class="pub-count" lang="en">០៣ ឯកសារ</span>
         </div>
 
         <div class="pub">
@@ -316,15 +341,15 @@
          EDUCATION
          ============================================================ -->
     <section id="background">
-      <div class="section-label">Education</div>
+      <div class="section-label"><span lang="en">Education</span><span lang="kh">ការសិក្សា</span></div>
 
       <div class="timeline">
 
         <div class="entry">
-          <div class="entry-period">2023 — Present</div>
+          <div class="entry-period"><span lang="en">2023 — Present</span><span  lang="kh" >២០២៣ — បច្ចុប្បន្ន</span></div>
           <div>
-            <div class="entry-title">M.Eng. & Ph.D. in AI/IoT/Big Data Based Future Energy Industry</div>
-            <div class="entry-org">Chung-Ang University, Seoul, Republic of Korea</div>
+            <div class="entry-title"><span lang="kh">អនុបណ្ឌិត និងបណ្ឌិតវិទ្យាសាស្ត្រ​ ផ្នែក AI/IoT/Big Data សម្រាប់ឧស្សាហកម្មថាមពល​អនាគត </span><span  lang="en" >M.Eng. & Ph.D. in AI/IoT/Big Data Based Future Energy Industry</span></div>
+            <div class="entry-org"><span lang="en">Chung-Ang University, Seoul, Republic of Korea</span><span  lang="kh" >សាកលវិទ្យាល័យ Chung-Ang, សេអ៊ូល, សាធារណរដ្ឋកូរ៉េ</span></div>
             <div class="entry-note">
               AINS Lab — Autonomous Intelligent Networks and Systems.
             </div>
@@ -332,9 +357,9 @@
         </div>
 
         <div class="entry">
-          <div class="entry-period">2019 — 2023</div>
+          <div class="entry-period"><span lang="en">2019 — 2023</span><span  lang="kh" >២០១៩ — ២០២៣</span></div>
           <div>
-            <div class="entry-title">B.Sc. in Information Technology</div>
+            <div class="entry-title"><span  lang="kh" >បរិញ្ញាបត្រវិទ្យាសាស្ត្រ ផ្នែក ព័ត៌មានវិទ្យា</span> <span lang="en">B.Sc. in Information Technology</span></span></div>
             <div class="entry-org">School of Information and Communication Technology, GPA: 3.96</div>
           </div>
         </div>
@@ -346,14 +371,14 @@
          EXPERIENCE
          ============================================================ -->
     <section id="experience">
-      <div class="section-label">Experience</div>
+      <div class="section-label"><span lang="en">Experience</span><span lang="kh">បទពិសោធន៍ការងារ</span></div>
 
       <div class="timeline">
 
         <div class="entry">
-          <div class="entry-period">2023 — Present</div>
+          <div class="entry-period"><span lang="en">2023 — Present</span><span lang="kh">២០២៣-បច្ចុប្បន្ន</span></div>
           <div>
-            <div class="entry-title">Doctoral Researcher</div>
+            <div class="entry-title"><span lang="en">Doctoral Researcher</span><span lang="kh">បេក្ខភាពបណ្ឌិត</span></div>
             <div class="entry-org">AINS Lab, Chung-Ang University</div>
             <div class="entry-note">
               Develop AI‑native learning and decision‑making algorithms 
@@ -364,9 +389,9 @@
         </div>
 
         <div class="entry">
-          <div class="entry-period">2022 — 2023</div>
+          <div class="entry-period"><span lang="en">2022 — 2023</span><span lang="kh">២០២២-២០២៣</span></div>
           <div>
-            <div class="entry-title">Data Research Analyst & Web Developer Intern</div>
+            <div class="entry-title"><span lang="en">Data Research Analyst & Web Developer Intern</span><span lang="kh"> ហាត់ការផ្នែកវិភាគស្រាវជ្រាវទិន្នន័យ និងអភិវឌ្ឍន៍គេហទំព័រ</span></div>
             <div class="entry-org">Western Digital</div>
             <div class="entry-note">
               Within a short timeframe, I developed an in-house web application using the 
@@ -378,9 +403,9 @@
         </div>
 
         <div class="entry">
-          <div class="entry-period">2021 — 2021</div>
+          <div class="entry-period"><span lang="en">2021 — 2021</span><span lang="kh">២០២០-២០២១</span></div>
           <div>
-            <div class="entry-title">Software Developer</div>
+            <div class="entry-title"><span lang="en">Software Developer</span><span lang="kh">អ្នកអភិវឌ្ឍន៍កម្មវិធី</span></div>
             <div class="entry-org">Mulberry Soft</div>
             <div class="entry-note">
               I built end-to-end e-commerce and POS systems, 
@@ -424,11 +449,12 @@
          BEYOND RESEARCH  (optional — delete if not needed)
          ============================================================ -->
     <section id="beyond">
-      <div class="section-label">Beyond Research</div>
+      <div class="section-label"><span lang="en">Beyond Research</span><span lang="kh">ក្រៅពីការស្រាវជ្រាវ</span></div>
       <p class="beyond-text">
-        "Originally from Cambodia, a son of Angkor, currently based in Seoul. 
+        <span lang="en"> "Originally from Cambodia, a son of Angkor, currently based in Seoul. 
         Outside the lab, I am a passionate Liverpool supporter and enjoy reading widely in Southeast Asian history, Buddhist philosophy, and the history of science.
-        I occasionally mentor undergraduate and master’s students in their research. In my free time, I enjoy running, cooking, and photography."
+        I occasionally mentor undergraduate and master’s students in their research. In my free time, I enjoy running, cooking, and photography."</span>
+        <span lang="kh">"មានដើមកំណើតមកពីប្រទេសកម្ពុជា ជាកូនខ្មែរពូជអ្នកថែអង្គរ ហើយបច្ចុប្បន្នកំពុងរស់នៅទីក្រុងសេអ៊ូល។ ក្រៅពីការងារស្រាវជ្រាវក្នុងមន្ទីរពិសោធន៍ ខ្ញុំជាអ្នកគាំទ្រក្រុមបាល់ទាត់ Liverpool មួយរូប និងចូលចិត្តអានសៀវភៅទាក់ទងអំពីប្រវត្តិសាស្ត្រអាស៊ីអាគ្នេយ៍ ទស្សនវិជ្ជាព្រះពុទ្ធសាសនា និងប្រវត្តិនៃវិទ្យាសាស្ត្រ។ ពេលខ្លះ ខ្ញុំក៏ជួយណែនាំនិស្សិតថ្នាក់បរិញ្ញាបត្រ និងថ្នាក់អនុបណ្ឌិតក្នុងការស្រាវជ្រាវរបស់ពួកគេផងដែរ។ នៅពេលទំនេរ ខ្ញុំចូលចិត្តរត់ ចំអិនម្ហូប និងថតរូប។"</span>
       </p>
     </section>
 
@@ -444,7 +470,7 @@
          CONTACT
          ============================================================ -->
     <section id="contact">
-      <div class="section-label">Contact</div>
+      <div class="section-label"><span lang="en">Contact</span><span lang="kh">ទំនាក់ទំនង</span></div>
 
       <div class="contact-list">
         <a href="mailto:your.email@example.com">
@@ -476,6 +502,24 @@
     <div>© 2026 Vitou That</div>
     <div>Last updated · May 2026</div>
   </footer>
+<script>
+  (function () {
+    const body = document.body;
+    const toggle = document.getElementById('lang-toggle');
 
+    // Load saved choice, default to English
+    const saved = localStorage.getItem('lang') || 'en';
+    body.setAttribute('data-lang', saved);
+    toggle.textContent = saved === 'en' ? 'ខ្មែរ' : 'EN';
+
+    toggle.addEventListener('click', function () {
+      const current = body.getAttribute('data-lang');
+      const next = current === 'en' ? 'kh' : 'en';
+      body.setAttribute('data-lang', next);
+      localStorage.setItem('lang', next);
+      toggle.textContent = next === 'en' ? 'ខ្មែរ' : 'EN';
+    });
+  })();
+</script>
 </body>
 </html>
