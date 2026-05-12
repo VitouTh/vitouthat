@@ -559,9 +559,15 @@ footer {
    16. LANGUAGE SWITCHER
    ============================================================ */
 
-/* Hide the inactive language */
-body[data-lang="en"] [lang="kh"] { display: none; }
-body[data-lang="kh"] [lang="en"] { display: none; }
+/* Default: English */
+body[data-lang="en"] [lang="kh"] {
+  display: none;
+}
+
+/* Khmer mode */
+body[data-lang="kh"] [lang="en"] {
+  display: none;
+}
 
 /* Khmer typography — applied when body is in Khmer mode */
 body[data-lang="kh"],
