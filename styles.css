@@ -7,7 +7,7 @@
    1. THEME VARIABLES  (edit colors here)
    ============================================================ */
 :root {
-  --cream:        #F4EEE2;   /* page background */
+  --cream:        #fcfaf6;   /* page background */
   --cream-soft:   #EFE7D7;   /* soft card */
   --paper:        #FBF7EE;   /* lightest panel */
   --bark:         #2A241E;   /* primary text */
@@ -608,4 +608,16 @@ body[data-lang="kh"] .tagline { line-height: 1.85; }
   background: var(--clay);
   color: var(--paper);
   border-color: var(--clay);
+}
+
+.pub-authors {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--muted, #666);
+  line-height: 1.4;
+}
+
+.pub-authors strong {
+  color: var(--text, #111);
+  font-weight: 700;
 }
